@@ -1,0 +1,51 @@
+﻿@{
+    Html.EnableClientValidation(true);
+    Html.EnableUnobtrusiveJavaScript(true);
+}
+
+<div class="forma">
+    <h2>Tell us about your pet.</h2>
+    @Html.Label("pettype", "What kind of pet do you have?", new { @class = "lblContacts" })<br />
+
+    @Html.RadioButton("pettype", "ff1e4530-729f-e611-80dd-f6449c2193c5")<span class="lbl">Dog</span>
+    @Html.RadioButton("pettype", "4dfeeb28-729f-e611-80dd-f6449c2193c5")<span class="lbl">Cat</span>
+    @Html.RadioButton("pettype", "001f4530-729f-e611-80dd-f6449c2193c5")<span class="lbl">Other</span><br />
+
+    @Html.Label("breed", "What’s your pet’s breed?", new { @class = "lblContacts" })<br />
+
+    <select id="mySelect" class="txtContacts"></select><br />
+
+    @Html.Label("name", "What’s your pet’s name?", new { @class = "lblContacts" })<br />
+
+    @Html.TextBox("name", null, new { @class = "txtContacts" })<br />
+
+    @Html.Label("birthdate", "When is your pet’s birthday?", new { @class = "lblContacts" })<br />
+
+    @Html.TextBox("birthdate", null, new { @class = "txtContacts" })<br />
+
+    @Html.Label("cost", "How much does your pet cost?", new { @class = "lblContacts" })<br />
+
+    @Html.TextBox("cost", null, new { @class = "txtContacts" })<br />
+
+    @Html.Label("gender", "What gender is your pet?", new { @class = "lblContacts" })<br />
+
+    @Html.RadioButton("gender", "100000000")<span class="lbl">Male</span>
+    @Html.RadioButton("gender", "100000001")<span class="lbl">Female</span> <br />
+
+    @Html.Label("chipped", "Is your pet chipped?", new { @class = "lblContacts" })<br />
+
+    @Html.RadioButton("chipped", true)<span class="lbl">Yes</span>
+    @Html.RadioButton("chipped", false)<span class="lbl">No</span>  <br />
+
+    @Html.Label("neutered", "Is your pet neutered?", new { @class = "lblContacts" })<br />
+
+    @Html.RadioButton("neutered", true)<span class="lbl">Yes</span>
+    @Html.RadioButton("neutered", false)<span class="lbl">No</span><br />
+
+    @Html.Label("vaccinated", "Is your pet vaccinated?", new { @class = "lblContacts" })<br />
+
+    @Html.RadioButton("vaccinated", true)<span class="lbl">Yes</span>
+    @Html.RadioButton("vaccinated", false)<span class="lbl">No</span><br />
+
+    <input type="submit" value="Submit" id="btnSend" />
+</div>

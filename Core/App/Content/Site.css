@@ -1,0 +1,596 @@
+﻿* {
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Calibri, Tahoma, sans-serif;
+}
+.spanlogo {
+    position: absolute;
+    top: 20px;
+    left: 100px;
+    transition: 1s;
+    z-index: 8;
+}
+span.spanlogo.active {
+    left: 20vw;
+    transition: 1s;
+}
+.logo {
+    width: 250px;
+    height: 70px;
+}
+.container-fluid{
+    padding:0;
+}
+.blackBox {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9;
+    height: 100%;
+    width: 50px;
+    background-color: #1A171B;
+    transition: 1s;
+}
+.blackBox.active {
+    opacity: 0;
+    transition: 1s;
+}
+.burger {
+    position: fixed;
+    left: 5px;
+    top: 10px;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    padding: 6px 4px 0 4px;
+    background-color: #1A171B;
+    cursor: pointer;
+    opacity: .5;
+    transition: .5s;
+}
+.burger.active {
+    position: fixed;
+    width: 70px;
+    padding: 10px 4px 0 4px;
+    background-color: none;
+    transition: 1.5s;
+    opacity:.5;
+}
+.burger:hover {
+    opacity: 1;
+}
+.burger span {
+    z-index:11;
+    width: 100%;
+    height: 4px;
+    display: block;
+    color:#fff;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0;
+}
+.burger.active span {
+    position: absolute;
+    width: calc(100% - 35px);
+}
+.burger.active span:nth-child(1) {
+    transform: rotate(45deg);
+}
+.burger.active span:nth-child(2) {
+    display: none;
+}
+.burger.active span:nth-child(3) {
+    transform: rotate(-45deg);
+}
+.row {
+    width: 100%;
+    margin: 0;
+}
+.navi {
+    position: fixed;
+    height: 100%;
+    left: -20%;
+    background: #1A171B;
+    transition: 1s;
+    z-index: 8;
+}
+div .navi.active {
+    position: fixed;
+    left: 0;
+    transition: 1s;
+}
+.content {
+padding: 0;
+}
+ul {
+    list-style: none;
+    text-align: center;
+    margin: 15vh 50px ;
+    box-sizing: border-box;
+}
+li {
+    width: 100%;
+    margin: 5% 0;
+    padding-bottom:5px;
+}
+.navPages a {
+    font-size: x-large;
+    color: #BDB9B6;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    transition: .5s;
+}
+.navPages a:hover {
+    color: #fff;
+    background: #AE111D;
+    text-decoration: none;
+}
+.navQuote a{
+    font-size:x-large;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    margin-top: 40%;
+    background-color: #AE111D;
+    transition: .5s;
+}
+.navQuote a:hover {
+    color: #AE111D;
+    background-color: #1A171B;
+}
+.navSocial{
+    margin-top:10vh;
+}
+.social {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    height: 25px;
+    width: 25px;
+    margin-left: 10px;
+    border-radius: 50%;
+    color: #1A171B;
+    background-color: #BDB9B6;
+}
+.social:hover {
+    background-color: #AE111D;
+    color: #fff;
+}
+#corefin {
+    color: #AE111D;
+    font-size: larger;
+    margin: 20px 0;
+}
+#navInfo{
+    color: #BDB9B6;
+    font-size: medium;
+}
+#navContact {
+    color: #BDB9B6;
+    font-size: medium;
+    text-decoration: none;
+}
+#navContact a {
+    color: #BDB9B6;
+    text-decoration: none;
+}
+#navContact a:hover {
+    color: #fff;
+}
+.navPP {
+    color: #BDB9B6;
+    font-size: medium;
+    text-decoration: none !important;
+}
+.navPP:hover {
+    color: #fff;
+}
+.your-class {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+    z-index: -1;
+}
+div img.mainBack {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+}
+.slick-dots {
+    position: absolute;
+    width: 100px;
+    height: 20px;
+    top: 460px;
+    left: 170px;
+    transition: .5s;
+    margin-bottom: 0;
+}
+.slick-dots.active {
+        position: absolute;
+        top: 460px;
+        left: 20vw;
+        transition: 1s;
+    }
+.plans {
+    position: absolute;
+    top: 170px;
+    left: 100px;
+    transition: .5s;
+}
+.plans.active {
+    left: 20vw;
+    transition: 1s;
+}
+.planslist {
+    margin: 30px;
+    text-align: left;
+    font-size: x-large;
+}
+.planslist {
+    list-style-image: url('../Images/check.png');
+    margin-bottom: 0;
+}
+.findOutMore {
+    display: inline-block;
+    width: 15vw;
+    text-align: center;
+   
+    background-color: #AE111D;
+}
+#findOutMore {
+    color: #BDB9B6;
+    font-size:x-large;
+    text-decoration: none;
+}
+.forma {
+    position: absolute;
+    top: 15vh;
+    left: 100px;
+    padding: 0;
+    transition: 1s;
+}
+.forma.active {
+    left: 20vw;
+    transition: 1s;
+}
+.Contacts {
+    position: relative;
+    top:0;
+    left: 0;
+}
+    
+.leftContact {
+    padding: 170px 0 0 100px;
+    transition:1s;
+}
+.leftContact.active {
+    left: 15vw;
+    transition: 1s;
+}
+.txtContacts {
+    font-size: large;
+    width: 25vw;
+    height: 30px;
+    padding: 1px 1px 1px 5px;
+    border: solid black 1px;
+    margin-bottom: 20px;
+}
+.txtAreaSContacts {
+    font-size: 16px;
+    width: 25vw;
+    padding: 5px;
+    border: solid black 1px;
+}
+#btnSend {
+    font-size: x-large;
+    width: 170px;
+    height: 60px;
+    margin-top: 20px;
+    color: #BDB9B6;
+    background-color: #AE111D;
+    border: none;
+}
+#btnSend:hover {
+    color: #AE111D;
+    background-color: #1A171B;
+    transition: .5s;
+}
+.lblContacts {
+    font-family: Calibri;
+    font-size: larger;
+}
+.rightContact {
+    padding: 170px 0 0 150px;
+    transition: 1s;
+}
+.rightContact.active {
+    padding: 170px 0 0 250px;
+    transition:1s;
+}
+.contactAdress {
+    font-size: 20px;
+    width:100%
+}
+#map {
+    width: 40vw;
+    height: 40vh;
+    margin-bottom: 100px;
+}
+.form {
+    position: absolute;
+    top: 170px;
+    left: 150px;
+}
+.lbl {
+    font-size: larger;
+    margin: 0 20px 0 5px
+}
+#mobileAdd{
+    height:0;
+    width:0;
+    opacity:0;
+}
+@media screen and (max-width:1600px) {
+    .navi {
+        position: absolute;
+        left: -20%;
+    }
+    ul {
+        margin: 150px 30px;
+    }
+    .navPages a {
+        font-size: large;
+    }
+    .navQuote a {
+        font-size: large;
+    }
+}
+@media screen and (max-width:1100px) {
+    .navPages a {
+        font-size: 16px;
+    }
+    .navQuote a {
+        font-size: 16px;
+    }
+    ul {
+        list-style: none;
+        text-align: center;
+        margin: 15vh 0;
+        box-sizing: border-box;
+    }
+    .corefin {
+        font-size: large;
+    }
+    .slick-dots.active {
+       
+        left: 210px;
+    }
+}
+@media screen and (max-width:769px){
+    .burger {
+        position: fixed;
+    }
+
+    .burger.active {
+        position: fixed;
+    }
+    .navi {
+        position: absolute;
+        left: -100%;
+    }
+    .nav {
+        margin-top: 50px;
+    }
+    .nav li{
+        margin-top:10px;
+        margin-bottom: 10px;
+    }
+    .navSocial {
+        margin-top: 20px;
+    }
+    .navQuote a {
+        margin-top: 0;
+    }
+    #corefin{
+        margin-top:10px;
+        margin-bottom:10px;
+    }
+    .navLastLi {
+        margin-bottom: 0 !important;
+        padding-bottom: 0;
+    }
+    .blackBox {
+        opacity: 0;
+    }
+    div img.mainBack {
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        height: 300px;
+    }
+    .plans {
+        position: absolute;
+        top:0;
+        left: 100px;
+    }
+    .plans.active {
+        position: absolute;
+        top: 0;
+        left: 100px;
+    }
+    h1 {
+        font-size: xx-large;
+        margin-top: 265px; 
+        color: black;
+    }
+    .planslist {
+        text-align: left;
+        font-size: large;
+    }
+    .slick-dots {
+        top: 305px;
+        left: Calc(50vw - 50px);
+    }
+    .slick-dots.active {
+        top: 305px;
+        left: Calc(50vw - 50px);
+    }
+    .spanlogo {
+        left: 10vw;
+    }
+    span.spanlogo.active {
+        left: 10vw;
+    }
+    .logo {
+        width: 200px;
+        height: 50px;
+    }
+    .forma {
+        left: 11vw;
+    }
+    .forma.active {
+        left: 11vw;
+    }
+    .txtContacts {
+        width: 40vw;
+    }
+    .txtAreaSContacts {
+        width: 40vw;
+    }
+    .leftContact {
+        padding: 15vh 0 0 10vw ;
+    }
+    .rightContact {
+        padding: 15vh 0 0 10vw;
+    }
+    #mobileAdd {
+       position:absolute;
+       top:150px;
+       left:0px;
+       width:100vw;
+       height:Calc(100vh - 300px);
+       z-index:-1;
+        opacity: 1;
+    }
+}
+@media screen and (max-width:680px) {
+    .spanlogo {
+        top: 10px;
+        left: 17vw;
+    }
+    span.spanlogo.active {
+        left: 17vw;
+    }
+    div img.mainBack {
+        margin: 0;
+        padding: 0;
+        width: 680px;
+        height: 300px
+    }
+  
+    /*.plans {
+        position: absolute;
+        top: 5vh;
+        left: 100px;
+        transition: .5s;
+    }
+    .planslist {
+        margin-top: 240px;
+        text-align: left;
+        font-size: large;
+    }*/
+    .leftContact {
+        padding: 15vh 0 0 17vw;
+    }
+    .rightContact {
+        padding: 15vh 0 0 17vw;
+    }
+    .txtContacts {
+        width: 70vw;
+    }
+    .txtAreaSContacts {
+        width: 70vw;
+    }
+    #map {
+        width: 70vw;
+    }
+}
+    @media screen and (max-width:420px) {
+        .navi.active{
+            position:fixed;
+            top:0;
+            left:0;
+            height:100%;
+        }
+        #fixIt.active {
+            position: fixed;
+        }
+        .nav {
+            margin-top: 0;
+        }
+        div img.mainBack {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 300px
+        }
+        h1 {
+            margin: 0;
+        }
+        h2{
+            font-size:x-large;
+            width:70vw;
+        }
+        .contactAdress{
+            width:70vw;
+        }
+        .plans {
+            position: absolute;
+            top: 340px;
+            left: Calc(50vw - 110px);
+            width: 220px;
+        }
+            .plans.active {
+                position: absolute;
+                top: 340px;
+                left: Calc(50vw - 110px);
+                width: 220px;
+            }
+        .planslist {
+            margin-top: 30px;
+            text-align: left;
+            font-size: medium;
+        }
+        .slick-dots {
+            left: Calc(50vw - 50px) ;
+        }
+        .slick-dots.active {
+            left: Calc(50vw - 50px);
+        }
+        .findOutMore {
+           width:45vw !important;
+        }
+        #findOutMore {
+            color: #000;
+            font-size: large;
+        }
+        .logo {
+            width: 150px;
+            height: 40px;
+        }
+        /*#ContactX {
+            left: 17vw;
+        }*/
+        .forma {
+            left: 17vw;
+        }
+        .forma.active {
+            left: 17vw;
+        }
+    }

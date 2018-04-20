@@ -1,0 +1,21 @@
+﻿<div class="row Contacts" id="ContactX" >
+    <div class="leftContact col-md-4">
+        <h2><strong>Send us a mesage.</strong></h2>
+        @Html.Label("Name","Name", new { @class = "lblContacts" })<br />
+        @Html.TextBox("Name", null, new { @class = "txtContacts" })<br />
+        @Html.Label("Email", "Email", new { @class = "lblContacts" })<br />
+        @Html.TextBox("Email" , null, new { @class = "txtContacts" })<br />
+        @Html.Label("Message", "Message", new { @class = "lblContacts" })<br />
+        @Html.TextArea("Body", null, new {@class="txtAreaSContacts" ,cols = "62", rows = "8" })<br />
+        <input type="submit" value="SEND" id="btnSend"/>
+    </div>
+    <div class="rightContact col-md-8">
+        <h2><strong>Find us on the map.</strong></h2>
+        <p class="contactAdress">
+            4 Addison Avenue, Holland Park, London, W11 4QR, United Kingdom
+        </p>
+        <div id="map"></div>
+    </div>
+    <script type="text/javascript">function initMap() { var location = { lat: 51.505995, lng: -0.211877 }; var map = new google.maps.Map(document.getElementById("map"), { zoom: 17, center: location }); var marker = new google.maps.Marker({ position: location, map: map }); }</script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTR9bBvZrLjaTiIuvQxQ15DmF7Sr3H8ug&callback=initMap"></script>
+</div>
